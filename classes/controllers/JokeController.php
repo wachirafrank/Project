@@ -9,7 +9,7 @@ class JokeController {
   }
   public function list(){
     $result = $this->jokesTable->findAll();
-    //var_dump($result);
+    // var_dump($result);
     $jokes = [];
 
     foreach($result as $joke) {
@@ -18,7 +18,7 @@ class JokeController {
       $jokes[] = ['id' => $joke['id'],'joketext'=> $joke['joketext'], 'jokedate' => $joke['jokedate'], 'name'=> $author['name'], 'email'=> $author['email']];
 
     }
-    var_dump($jokes);
+
     $title = 'Joke List';
     $totaljokes = $this->jokesTable->total();
 
@@ -33,7 +33,7 @@ class JokeController {
   public function delete(){
     $this->jokesTable->delete($_POST['id']);
 
-    header('location: index.php?action=list');
+    header('location: /joke/list');
 
   }
 
@@ -45,7 +45,7 @@ class JokeController {
       var_dump($joke);
       $this->jokesTable->save($joke);
 
-      header('location:index.php?action=list');
+      header('location:/joke/list');
   }
   else {
     if(isset($_GET['id'])){

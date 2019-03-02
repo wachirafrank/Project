@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="jokes.css">
+    <link rel="stylesheet" href="/jokes.css">
     <title><?=$title;?></title>
   </head>
 
@@ -14,9 +14,9 @@
     <nav>
       <ul>
 
-        <li><a href="index.php">Home</a></li>
-        <li><a href="index.php?action=list">List</a></li>
-        <li><a href="index.php?action=edit">Add a new  Joke</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/joke/list">List</a></li>
+        <li><a href="/joke/edit">Add a new  Joke</a></li>
       </ul>
     </nav>
 <main>
