@@ -1,5 +1,7 @@
 <?php
-class JokeController {
+
+namespace Ijdb\Controllers;
+class Joke {
   private $authorsTable;
   private $jokesTable;
 
